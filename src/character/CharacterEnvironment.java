@@ -16,7 +16,10 @@ import java.awt.event.MouseEvent;
  */
 class CharacterEnvironment extends Environment {
 
+    private Spongebob bob;
+    
     public CharacterEnvironment() {
+        bob = new Spongebob(100, 100);
     }
 
     @Override
@@ -41,6 +44,9 @@ class CharacterEnvironment extends Environment {
 
     @Override
     public void paintEnvironment(Graphics graphics) {
+        if (bob != null) {
+            bob.draw(graphics);
+        }
     }
 
 }
